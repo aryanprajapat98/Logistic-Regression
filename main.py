@@ -36,31 +36,31 @@ print('Presision score: ',precision_score(y_test,y_pre))
 print('Recall score: ',recall_score(y_test,y_pre))
 print('f1 score : ',f1_score(y_test,y_pre))
 
-# cm =confusion_matrix(y_test,y_pre)
+cm =confusion_matrix(y_test,y_pre)
 
-# plt.imshow(cm , cmap='Blues')
-# plt.colorbar()
-# plt.show()
+plt.imshow(cm , cmap='Blues')
+plt.colorbar()
+plt.show()
 
-# print("---Your Dibites---")
+print("---Your Dibites---")
 
-# Glucose = float(input("Enter your Glucose Level: "))
-# BMI = float(input('Enter your BMI: '))
-# Age = float(input('Enter Your Age: '))
-# Pregnancies = float(input('Enter Your Pregnancies: '))
+Glucose = float(input("Enter your Glucose Level: "))
+BMI = float(input('Enter your BMI: '))
+Age = float(input('Enter Your Age: '))
+Pregnancies = float(input('Enter Your Pregnancies: '))
 
-# data={
-#     'Glucose' : Glucose,
-#     'BMI' : BMI,
-#     'Age' : Age,
-#     'Pregnancies': Pregnancies
-# }
+data={
+    'Glucose' : Glucose,
+    'BMI' : BMI,
+    'Age' : Age,
+    'Pregnancies': Pregnancies
+}
 
-# data_df = pd.DataFrame([data])
+data_df = pd.DataFrame([data])
 
-# input_scale = scaler.transform(data_df)
-# pred = model.predict(data_df)
+input_scale = scaler.transform(data_df)
+pred = model.predict(data_df)
 
 
-# result = 'YOU HAVE DIABETES' if pred == 1 else "CONGRASS YOU DON'T HAVE DIABETES"
-# print(f'Your Test Result is : {result} {pred}')
+result = 'YOU HAVE DIABETES' if pred == 1 else "CONGRASS YOU DON'T HAVE DIABETES"
+print(f'Your Test Result is : {result} {pred}')
